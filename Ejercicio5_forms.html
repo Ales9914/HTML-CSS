@@ -1,0 +1,87 @@
+<!doctype html>
+
+<html>
+
+	<head>
+		<title>Table Tutorial</title>
+		<meta charset="utf-8">
+	</head>
+
+
+<body>
+
+<form name="employment" action="send.php" method="post"> <!El nombre del fomulario y la acción que se realizará. 
+											Php es el lenguaje con el que se manda la información al servidor.
+											El metodo es como se transmite la información del clinete al servidor; hay 2, Post y Get.
+											Get lo envía de la forma "URL.php?Name1=Value1&Name2=Value2&Name3=Value3 y así. No se debe usar para información sensible
+											Post lo envía en un mensaje de HTTP, es más complejo pero más seguro>
+ <table width="600" border="1" cellspacing="2" cellpadding="2">
+    <tr>
+      <td>Solicitud de trabajo</td>
+      <td></td>
+    </tr>
+	
+    <tr>
+      <td>First name</td>
+      <td><input type = "text" name=fname maxlength="50"/> </td> <!name es la etiqueta del campo, así lo va a encontrar el php>
+    </tr>
+	
+    <tr>
+      <td>Last Name</td>
+      <td><input type = "text" name=lname maxlength="50"/></td>
+    </tr>
+	
+    <tr>
+      <td>Position</td>
+      <td>
+			<select name = "position"> <!Para no enviar al php todo el nombre del cargo, vamos a mandar únicamente las primeras 2 letras>
+				<option value = "AC" >Contador</option>
+				<option value = "RE" >Recepcionsita</option>
+				<option value = "AD" >Administrador</option>
+				<option value = "SU" >Supervisor</option>
+	  
+	  
+	  
+			</select>
+	  </td>
+    </tr>
+	
+    <tr>
+      <td>Tipo de trabajo</td> <!Esta te deja elegir varias opciones>
+      <td><input type ="checkbox" name = "ft" />Full time
+		  <input type ="checkbox" name = "pt" />Part time
+		  <input type ="checkbox" name = "ct" />Contract
+		  </td>
+    </tr>
+	
+	
+    <tr>
+      <td>Employment status</td>
+      <td> <!Solo deja elegir una. Esto se llama radio button group>
+		  <input type ="radio" name = "estatus" value = "employed"/>Employed
+		  <input type ="radio" name = "estatus" value = "unemployed"/>Unemployed
+		  <input type ="radio" name = "estatus" value = "student"/>Student
+	  
+	  </td>
+    </tr>
+	
+    <tr>
+      <td>Additional comments</td>
+      <td>
+	  <textarea name="comments" cols = "45" rows ="5"></textarea>
+	  
+	  </td>
+    </tr>
+	
+	<tr>
+		<td></td>
+		<td>
+		<input type = "reset" name = "reset" value = "Reset" />
+		<input type = "submit" name = "submit" value = "Submit" />
+		</td>
+    </tr>
+  </table>
+
+
+</body>
+</html>

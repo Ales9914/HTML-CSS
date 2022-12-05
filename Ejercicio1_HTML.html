@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title> Ejercicio 1 </title>
+		<meta name= "description" content = "Ejercicio uno del curso de Udemy" /> 
+		<!Esta descripción es para indicarle al buscador el contenido de la página; 
+		si la descripción no es entregada, el buscador crea una automaticamente>
+		<meta http-equiv= "Content-Type" content = "text/html"; charset ="utf-8" />
+		<!Esta descripción es para indicar el set de caracteres que se está usando; utf-8 en este caso>
+		<meta name= "viewport" content = "width=device-width, initial-scale = 1"/>
+		<!Esta descripción es para indicarle al buscador que siga el ancho de la pantalla del dispositivo; 
+		además, para que el zoom predeterminado sea 1 cuando se cargue la página>
+		
+		<style type ="text/css">
+			Body {
+					color: red;
+				}
+		</style>
+		<!Esto es una regla en CSS; indica que todo lo que esté en el cuerpo debe ser de color rojo>
+		
+		
+		<script>
+			function MyFunction() {
+				var x = document.getElementById("fname");
+				x.value = x.value.toUpperCase();
+				}
+		</script>
+		<!Esto es una función en JavaScript que permite cambiar algo que escriba el usuario de minúscula a mayuscula>
+		
+		<body>
+			<p>Esta página combierte un texto de minúscula a mayúscula.</p>
+			Text: <input type = "text" id = "fname" onchange="MyFunction()">
+			<!Simplemente estamos como llamando la función>
+			
+			<p>Linea 1. <br> Linea 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 espacios</p>
+			<!Ejercicio para espacio sencillo y doble; además, hay que considerar que html colapsa multiples espacios
+			entonces que se hace para poner varos>
+			
+			<h1> Header 1 <h1>
+			<h3> Header 3 <h3>
+			<h5> <font face = "arial" size = "22" color ="black"> <!A esto se le llama inline text formatting> Header 5 </font><h5>
+			
+			<p> <strong> Bold Text </strong> <br>
+				<em> Italic Text </em>&nbsp;&nbsp;
+				<u> Underline Text </u>&nbsp;&nbsp;
+				<strike> Strike Text </strike>&nbsp;&nbsp;
+				<strong><em><u> Combine </u></em></strong>
+			</p> 
+		</body>
+
+	</head>
+</html>
